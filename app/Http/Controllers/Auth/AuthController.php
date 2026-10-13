@@ -32,9 +32,9 @@ class AuthController extends Controller
         $user = new User(['name' => $data['name'], 'email' => strtolower($data['email']), 'password' => $data['password']]);
         $user->role = Role::Student;
         $user->is_active = true;
+        // Email verification is disabled for this school-project build.
+        $user->email_verified_at = now();
         $user->save();
-
-        event(new Registered($user)); // sends the verification email through the configured mailer
 
         Auth::login($user);
         $request->session()->regenerate();
@@ -42,7 +42,7 @@ class AuthController extends Controller
         AuditLogger::record('user.registered', $user, actor: $user);
 
         return response()->json([
-            'message' => 'Account created. Please verify your email address.',
+            'message' => 'Account created.',
             'user' => UserResource::make($user),
         ], 201);
     }

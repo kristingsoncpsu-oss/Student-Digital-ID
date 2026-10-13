@@ -40,7 +40,7 @@ Route::middleware(['auth:sanctum', 'throttle:api'])->group(function () {
     | Student portal. Always scoped to the logged-in user's own record; there is no
     | student id in any of these URLs.
     */
-    Route::prefix('student')->middleware(['role:student', 'verified'])->group(function () {
+    Route::prefix('student')->middleware('role:student')->group(function () {
         Route::get('/dashboard', Student\DashboardController::class);
         Route::get('/profile', [Student\ProfileController::class, 'show']);
         Route::post('/profile', [Student\ProfileController::class, 'store']);

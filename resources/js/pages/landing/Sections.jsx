@@ -154,7 +154,7 @@ export function Features() {
 /* -------------------------------------------------------------- How it works */
 
 const STEPS = [
-    [UserPlus, 'Create an account', 'Register with your name and email, then verify your address.'],
+    [UserPlus, 'Create an account', 'Register with your name, email and a password.'],
     [FileCheck2, 'Submit student information', 'Fill in your student number, program and year level, and add a photo.'],
     [UserRoundCheck, 'Wait for staff verification', 'A registrar checks your details against school records.'],
     [CreditCard, 'Access your digital ID', 'Once approved, your ID and QR code are ready to show or print.'],
@@ -320,8 +320,7 @@ export function Security() {
 
 const FAQS = [
     ['Who can register?', 'Any student can create an account with their name and email. Registrar and administrator accounts are created by an administrator — they can never be created through public sign-up.'],
-    ['Why do I need to verify my email?', 'Verification confirms that the address is yours. Until you verify, you can log in but cannot submit information or view an ID.'],
-    ['How long does approval take?', 'That depends on your registrar’s office. You can follow your application status on your dashboard, and a rejection always includes a reason so you can fix it and resubmit.'],
+        ['How long does approval take?', 'That depends on your registrar’s office. You can follow your application status on your dashboard, and a rejection always includes a reason so you can fix it and resubmit.'],
     ['Can I change my name or program after approval?', 'Contact details can be edited directly. Details verified by the registrar are protected; use the correction request form and staff will review it.'],
     ['What happens if my ID is suspended?', 'The ID card shows a suspended state and its QR code stops verifying right away. Contact the registrar to resolve the reason.'],
     ['What can someone learn by scanning my QR code?', 'Only whether the ID is valid and a minimal identity (name and a masked student number, depending on school policy). Never your contact details or address.'],

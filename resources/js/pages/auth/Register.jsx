@@ -35,7 +35,7 @@ export default function Register() {
         setFormError('');
         try {
             await signUp(values);
-            toast.success('Account created. Check your inbox to verify your email.');
+            toast.success('Account created. Welcome!');
             navigate('/portal', { replace: true });
         } catch (e) {
             const err = parseError(e);
@@ -72,7 +72,6 @@ export default function Register() {
                     type="email"
                     autoComplete="email"
                     required
-                    hint="We’ll send a verification link to this address."
                     error={errors.email?.message}
                     {...register('email', {
                         required: 'Enter your email address.',

@@ -31,12 +31,12 @@ class AuthTest extends TestCase
         $this->postJson('/api/register', $this->registerPayload())
             ->assertCreated()
             ->assertJsonPath('user.role', 'student')
-            ->assertJsonPath('user.email_verified', false);
+            ->assertJsonPath('user.email_verified', true);
 
         $user = User::where('email', 'maria@example.test')->firstOrFail();
         $this->assertSame(Role::Student, $user->role);
         $this->assertNotSame('GoodPass#2026', $user->password, 'password must be hashed');
-        Notification::assertSentTo($user, VerifyEmail::class);
+        Notification::assertNothingSent(); // email verification is disabled
     }
 
     public function test_public_registration_can_never_assign_a_privileged_role(): void
@@ -115,12 +115,12 @@ class AuthTest extends TestCase
         $this->get('/email/verify/'.$user->id.'/'.sha1($user->email))->assertForbidden();
     }
 
-    public function test_unverified_students_cannot_use_student_features(): void
+    public function test_new_students_can_use_the_portal_without_email_verification(): void
     {
-        $user = User::factory()->unverified()->create();
+        $this->postJson('/api/register', $this->registerPayload())->assertCreated();
 
-        $this->actingAs($user)->getJson('/api/student/dashboard')->assertForbidden();
-        $this->actingAs($user)->postJson('/api/student/profile', $this->validProfile())->assertForbidden();
+        $this->getJson('/api/student/dashboard')->assertOk();
+        $this->postJson('/api/student/profile', $this->validProfile())->assertCreated();
     }
 
     public function test_password_can_be_changed_and_reset(): void
