@@ -1,0 +1,392 @@
+{
+  "_IdActions-QjcuK-d6.js": {
+    "file": "assets/IdActions-QjcuK-d6.js",
+    "name": "IdActions",
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_Modal-B14_vUZl.js",
+      "_circle-pause-DTNMzLSp.js"
+    ]
+  },
+  "_Modal-B14_vUZl.js": {
+    "file": "assets/Modal-B14_vUZl.js",
+    "name": "Modal",
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js"
+    ]
+  },
+  "_PageHeader-C0eoYjMD.js": {
+    "file": "assets/PageHeader-C0eoYjMD.js",
+    "name": "PageHeader",
+    "imports": [
+      "resources/js/main.jsx"
+    ]
+  },
+  "_Pagination-D4SD54ZR.js": {
+    "file": "assets/Pagination-D4SD54ZR.js",
+    "name": "Pagination",
+    "imports": [
+      "resources/js/main.jsx"
+    ]
+  },
+  "_StudentForm-DGJH6Ckt.js": {
+    "file": "assets/StudentForm-DGJH6Ckt.js",
+    "name": "StudentForm",
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_Modal-B14_vUZl.js",
+      "_save-BqV8srrV.js"
+    ]
+  },
+  "_charts-BRD-FdFR.js": {
+    "file": "assets/charts-BRD-FdFR.js",
+    "name": "charts",
+    "imports": [
+      "_react-BM15_v9m.js"
+    ]
+  },
+  "_check-qxRDLuwE.js": {
+    "file": "assets/check-qxRDLuwE.js",
+    "name": "check",
+    "imports": [
+      "resources/js/main.jsx"
+    ]
+  },
+  "_circle-pause-DTNMzLSp.js": {
+    "file": "assets/circle-pause-DTNMzLSp.js",
+    "name": "circle-pause",
+    "imports": [
+      "resources/js/main.jsx"
+    ]
+  },
+  "_circle-question-mark-D5p4c0ua.js": {
+    "file": "assets/circle-question-mark-D5p4c0ua.js",
+    "name": "circle-question-mark",
+    "imports": [
+      "resources/js/main.jsx"
+    ]
+  },
+  "_hourglass-ODGROpVn.js": {
+    "file": "assets/hourglass-ODGROpVn.js",
+    "name": "hourglass",
+    "imports": [
+      "resources/js/main.jsx"
+    ]
+  },
+  "_message-square-warning-pU9zSLx6.js": {
+    "file": "assets/message-square-warning-pU9zSLx6.js",
+    "name": "message-square-warning",
+    "imports": [
+      "resources/js/main.jsx"
+    ]
+  },
+  "_pencil-DCtBTR_4.js": {
+    "file": "assets/pencil-DCtBTR_4.js",
+    "name": "pencil",
+    "imports": [
+      "resources/js/main.jsx"
+    ]
+  },
+  "_plus-mdGPQWms.js": {
+    "file": "assets/plus-mdGPQWms.js",
+    "name": "plus",
+    "imports": [
+      "resources/js/main.jsx"
+    ]
+  },
+  "_react-BM15_v9m.js": {
+    "file": "assets/react-BM15_v9m.js",
+    "name": "react"
+  },
+  "_save-BqV8srrV.js": {
+    "file": "assets/save-BqV8srrV.js",
+    "name": "save",
+    "imports": [
+      "resources/js/main.jsx"
+    ]
+  },
+  "_useDebounce-BIMy4LQf.js": {
+    "file": "assets/useDebounce-BIMy4LQf.js",
+    "name": "useDebounce",
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-C_Yr-1un.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/main.jsx": {
+    "file": "assets/main-BB41sW4p.js",
+    "name": "main",
+    "src": "resources/js/main.jsx",
+    "isEntry": true,
+    "imports": [
+      "_react-BM15_v9m.js"
+    ],
+    "dynamicImports": [
+      "resources/js/pages/student/Dashboard.jsx",
+      "resources/js/pages/student/Profile.jsx",
+      "resources/js/pages/student/DigitalId.jsx",
+      "resources/js/pages/student/Security.jsx",
+      "resources/js/pages/admin/Overview.jsx",
+      "resources/js/pages/admin/Students.jsx",
+      "resources/js/pages/admin/StudentDetail.jsx",
+      "resources/js/pages/admin/StudentEdit.jsx",
+      "resources/js/pages/admin/Applications.jsx",
+      "resources/js/pages/admin/ApplicationReview.jsx",
+      "resources/js/pages/admin/DigitalIds.jsx",
+      "resources/js/pages/admin/Staff.jsx",
+      "resources/js/pages/admin/AuditLogs.jsx",
+      "resources/js/pages/admin/Settings.jsx"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/admin/ApplicationReview.jsx": {
+    "file": "assets/ApplicationReview-B1GUlaWE.js",
+    "name": "ApplicationReview",
+    "src": "resources/js/pages/admin/ApplicationReview.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_PageHeader-C0eoYjMD.js",
+      "_Modal-B14_vUZl.js",
+      "_circle-question-mark-D5p4c0ua.js",
+      "_check-qxRDLuwE.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/admin/Applications.jsx": {
+    "file": "assets/Applications-CF1qi8mE.js",
+    "name": "Applications",
+    "src": "resources/js/pages/admin/Applications.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_PageHeader-C0eoYjMD.js",
+      "_Modal-B14_vUZl.js",
+      "_Pagination-D4SD54ZR.js",
+      "_useDebounce-BIMy4LQf.js",
+      "_message-square-warning-pU9zSLx6.js",
+      "_check-qxRDLuwE.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/admin/AuditLogs.jsx": {
+    "file": "assets/AuditLogs-BKinrTRB.js",
+    "name": "AuditLogs",
+    "src": "resources/js/pages/admin/AuditLogs.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_PageHeader-C0eoYjMD.js",
+      "_Pagination-D4SD54ZR.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/admin/DigitalIds.jsx": {
+    "file": "assets/DigitalIds-ClPGs67P.js",
+    "name": "DigitalIds",
+    "src": "resources/js/pages/admin/DigitalIds.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_PageHeader-C0eoYjMD.js",
+      "_Pagination-D4SD54ZR.js",
+      "_IdActions-QjcuK-d6.js",
+      "_useDebounce-BIMy4LQf.js",
+      "_Modal-B14_vUZl.js",
+      "_circle-pause-DTNMzLSp.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/admin/Overview.jsx": {
+    "file": "assets/Overview-5x8GfrCQ.js",
+    "name": "Overview",
+    "src": "resources/js/pages/admin/Overview.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_PageHeader-C0eoYjMD.js",
+      "_react-BM15_v9m.js",
+      "_charts-BRD-FdFR.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/admin/Settings.jsx": {
+    "file": "assets/Settings-Cmw4fjT6.js",
+    "name": "Settings",
+    "src": "resources/js/pages/admin/Settings.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_PageHeader-C0eoYjMD.js",
+      "_plus-mdGPQWms.js",
+      "_save-BqV8srrV.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/admin/Staff.jsx": {
+    "file": "assets/Staff-VT9vMEXw.js",
+    "name": "Staff",
+    "src": "resources/js/pages/admin/Staff.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_PageHeader-C0eoYjMD.js",
+      "_Modal-B14_vUZl.js",
+      "_Pagination-D4SD54ZR.js",
+      "_useDebounce-BIMy4LQf.js",
+      "_plus-mdGPQWms.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/admin/StudentDetail.jsx": {
+    "file": "assets/StudentDetail-DAM_s04t.js",
+    "name": "StudentDetail",
+    "src": "resources/js/pages/admin/StudentDetail.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_PageHeader-C0eoYjMD.js",
+      "_Modal-B14_vUZl.js",
+      "_IdActions-QjcuK-d6.js",
+      "_circle-question-mark-D5p4c0ua.js",
+      "_pencil-DCtBTR_4.js",
+      "_circle-pause-DTNMzLSp.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/admin/StudentEdit.jsx": {
+    "file": "assets/StudentEdit-CP8TSa5N.js",
+    "name": "StudentEdit",
+    "src": "resources/js/pages/admin/StudentEdit.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_PageHeader-C0eoYjMD.js",
+      "_StudentForm-DGJH6Ckt.js",
+      "_react-BM15_v9m.js",
+      "_Modal-B14_vUZl.js",
+      "_save-BqV8srrV.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/admin/Students.jsx": {
+    "file": "assets/Students-lDyhegoq.js",
+    "name": "Students",
+    "src": "resources/js/pages/admin/Students.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_PageHeader-C0eoYjMD.js",
+      "_Pagination-D4SD54ZR.js",
+      "_useDebounce-BIMy4LQf.js",
+      "_plus-mdGPQWms.js",
+      "_pencil-DCtBTR_4.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/student/Dashboard.jsx": {
+    "file": "assets/Dashboard-Ct2FiZma.js",
+    "name": "Dashboard",
+    "src": "resources/js/pages/student/Dashboard.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_circle-pause-DTNMzLSp.js",
+      "_hourglass-ODGROpVn.js",
+      "_react-BM15_v9m.js",
+      "_message-square-warning-pU9zSLx6.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/student/DigitalId.jsx": {
+    "file": "assets/DigitalId-BJauQTcG.js",
+    "name": "DigitalId",
+    "src": "resources/js/pages/student/DigitalId.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_PageHeader-C0eoYjMD.js",
+      "_hourglass-ODGROpVn.js",
+      "_react-BM15_v9m.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/student/Profile.jsx": {
+    "file": "assets/Profile-DOovykcH.js",
+    "name": "Profile",
+    "src": "resources/js/pages/student/Profile.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_PageHeader-C0eoYjMD.js",
+      "_StudentForm-DGJH6Ckt.js",
+      "_message-square-warning-pU9zSLx6.js",
+      "_Modal-B14_vUZl.js",
+      "_save-BqV8srrV.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  },
+  "resources/js/pages/student/Security.jsx": {
+    "file": "assets/Security-BssuFJMa.js",
+    "name": "Security",
+    "src": "resources/js/pages/student/Security.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/main.jsx",
+      "_react-BM15_v9m.js",
+      "_PageHeader-C0eoYjMD.js"
+    ],
+    "css": [
+      "assets/app-C_Yr-1un.css"
+    ]
+  }
+}

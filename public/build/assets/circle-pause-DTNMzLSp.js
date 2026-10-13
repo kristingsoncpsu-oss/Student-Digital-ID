@@ -1,0 +1,1 @@
+import{c}from"./main-BB41sW4p.js";const e={name:"circle-pause",size:24,node:[["circle",{cx:"12",cy:"12",r:"10",key:"1mglay"}],["line",{x1:"10",x2:"10",y1:"15",y2:"9",key:"c1nkhi"}],["line",{x1:"14",x2:"14",y1:"15",y2:"9",key:"h65svq"}]],aliases:["pause-circle"]};e.node;const i=c(e);export{i as C};

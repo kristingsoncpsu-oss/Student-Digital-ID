@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: 'Hanken Grotesk', ui-sans-serif, system-ui, sans-serif;
+        -webkit-text-size-adjust: 100%;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-paper text-ink;
+        font-feature-settings: 'ss01', 'cv11';
+    }
+
+    ::selection {
+        @apply bg-teal-200 text-navy-950;
+    }
+
+    :focus-visible {
+        outline: 2px solid theme('colors.teal.500');
+        outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+@layer components {
+    /* Buttons */
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold transition
+            disabled:cursor-not-allowed disabled:opacity-55;
+    }
+    .btn-sm {
+        @apply px-3 py-1.5 text-[13px];
+    }
+    .btn-lg {
+        @apply px-6 py-3.5 text-[15px];
+    }
+    .btn-primary {
+        @apply btn bg-navy-900 text-white shadow-card hover:bg-navy-800 active:bg-navy-950;
+    }
+    .btn-accent {
+        @apply btn bg-teal-500 text-white shadow-card hover:bg-teal-600;
+    }
+    .btn-secondary {
+        @apply btn border border-line bg-white text-ink shadow-card hover:border-navy-200 hover:bg-navy-50;
+    }
+    .btn-ghost {
+        @apply btn text-navy-700 hover:bg-navy-50;
+    }
+    .btn-danger {
+        @apply btn bg-rose-600 text-white shadow-card hover:bg-rose-700;
+    }
+
+    /* Form controls */
+    .label {
+        @apply mb-1.5 block text-[13px] font-semibold text-navy-800;
+    }
+    .input {
+        @apply block w-full rounded-md border border-[#cfd5e0] bg-white px-3 py-2.5 text-sm text-ink
+            placeholder:text-slate-400 transition focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20
+            disabled:bg-slate-50 disabled:text-slate-500;
+    }
+    .input-error {
+        @apply border-rose-400 focus:border-rose-500 focus:ring-rose-500/20;
+    }
+
+    /* Surfaces */
+    .panel {
+        @apply rounded-lg border border-line bg-white shadow-card;
+    }
+    .eyebrow {
+        @apply text-[11px] font-bold uppercase tracking-[0.14em] text-teal-600;
+    }
+
+    /* Tables */
+    .tbl {
+        @apply w-full border-collapse text-left text-sm;
+    }
+    .tbl thead th {
+        @apply whitespace-nowrap border-b border-line bg-slate-50/80 px-4 py-2.5 text-[11px] font-bold uppercase
+            tracking-wider text-slate-500;
+    }
+    .tbl tbody td {
+        @apply border-b border-line/70 px-4 py-3 align-middle;
+    }
+    .tbl tbody tr:hover td {
+        @apply bg-navy-50/50;
+    }
+    .tbl tbody tr:last-child td {
+        @apply border-b-0;
+    }
+}
+
+/* Subtle architectural grid used behind the hero. */
+.bg-grid {
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+}
+
+.bg-dots-light {
+    background-image: radial-gradient(rgba(11, 23, 48, 0.12) 1px, transparent 1px);
+    background-size: 18px 18px;
+}
+
+/* ID card flip */
+.flip-scene {
+    perspective: 1400px;
+}
+.flip-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.flip-card.is-flipped {
+    transform: rotateY(180deg);
+}
+.flip-face {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+/* Printing: only the ID sheet is visible, both faces side by side at card size. */
+@media print {
+    @page {
+        margin: 12mm;
+    }
+    body * {
+        visibility: hidden;
+    }
+    .print-sheet,
+    .print-sheet * {
+        visibility: visible;
+    }
+    .print-sheet {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex !important;
+        gap: 10mm;
+        align-items: flex-start;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .print-card {
+        transform: none !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+.print-sheet {
+    display: none;
+}
