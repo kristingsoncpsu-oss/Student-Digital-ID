@@ -1,9 +1,5 @@
 <?php
 
-/*
- | Defaults for institution branding and ID policy. Administrators can override
- | most of these at runtime from Settings (stored in the `settings` table).
- */
 return [
     'defaults' => [
         'institution_name' => 'Central Philippines State University',
@@ -12,7 +8,7 @@ return [
         'campus_note' => 'Negros Occidental',
         'support_email' => 'ccs-registrar@example.edu',
         'support_phone' => '+63 000 000 0000',
-        // Empty = ID never expires. Set a number of months to enforce validity.
+    
         'id_validity_months' => null,
         'id_back_note' => 'This card is the property of the institution. If found, please return it to the registrar.',
         'collect_address' => false,
@@ -21,8 +17,6 @@ return [
         'verify_show_program' => true,
         'verify_mask_number' => true,
         'programs' => [
-            'Bachelor of Science in Information Technology',
-            'Bachelor of Science in Computer Science',
             'Bachelor of Science in Information Systems',
         ],
     ],
