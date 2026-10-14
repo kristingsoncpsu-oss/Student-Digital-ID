@@ -22,13 +22,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Password::defaults(function () {
-            $rule = Password::min(10)->mixedCase()->numbers();
-
-            // Checks the HaveIBeenPwned k-anonymity API; only enforced in production.
-            return $this->app->isProduction() ? $rule->uncompromised() : $rule;
+            return Password::min(10)->mixedCase()->numbers();
         });
 
-        // The verification link opens an API-signed route, which then redirects into the SPA.
         VerifyEmail::createUrlUsing(function ($notifiable) {
             return URL::temporarySignedRoute(
                 'verification.verify',
@@ -37,7 +33,6 @@ class AppServiceProvider extends ServiceProvider
             );
         });
 
-        // Password reset links land on the React reset-password page.
         ResetPassword::createUrlUsing(function ($notifiable, string $token) {
             return url('/reset-password').'?'.http_build_query([
                 'token' => $token,
@@ -51,7 +46,6 @@ class AppServiceProvider extends ServiceProvider
         ]);
         RateLimiter::for('register', fn (Request $r) => Limit::perMinute(6)->by($r->ip()));
         RateLimiter::for('password-reset', fn (Request $r) => Limit::perMinute(5)->by($r->ip()));
-        // Public QR verification: slows token guessing / scraping.
         RateLimiter::for('verify', fn (Request $r) => Limit::perMinute(30)->by($r->ip()));
         RateLimiter::for('api', fn (Request $r) => Limit::perMinute(240)->by($r->user()?->id ?: $r->ip()));
     }
