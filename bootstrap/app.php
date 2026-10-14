@@ -14,8 +14,15 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        // Cookie-based SPA authentication (Sanctum stateful API).
-        $middleware->statefulApi();
+        // Cookie-based SPA authentication. The React app and the API share one origin, so the
+        // API always runs with cookies + session + CSRF instead of relying on Sanctum guessing
+        // from the Origin/Referer header (which breaks behind some proxies/CDNs).
+        $middleware->api(prepend: [
+            \Illuminate\Cookie\Middleware\EncryptCookies::class,
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+            \Illuminate\Foundation\Http\Middleware\ValidateCsrfToken::class,
+        ]);
 
         $middleware->alias([
             'role' => EnsureUserHasRole::class,
